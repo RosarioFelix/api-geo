@@ -4,15 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link href="http://www.google.com/images/branding/product/ico/maps_32dp.ico" rel="shortcut icon">
+  <title>Api-Maps</title>
 </head>
 <body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="col-md-2">
+          <label for=""><span class="glyphicon glyphicon-record"></span></label>
+        </div>
+        <div class="col-md-10">
+          <input type="text" class="form-control" id="punto-partida" placeholder="Ingrese tu punto de partida">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="col-md-2">
+          <label for=""><span class="glyphicon glyphicon-send"></span></label>
+        </div>
+        <div class="col-md-10">
+          <input type="text" class="form-control" id="punto-destino" placeholder="Ingrese tu punto de partida">
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <button id="trazar-ruta">Trazar ruta</button>
+      </div>
+      <div class="col-lg-2">
+        <button id="encuentrame">Encuentrame</button>
+      </div>
+    </div>
+  </div>
   <div id="map"></div>
-  <button id="encuentrame">Encuentrame</button>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-obSJMu6fL6Aj2dOuJU6RJFNci-Mbuho&callback=initMap"
+  <div id = "tarifa" class="none"></div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-obSJMu6fL6Aj2dOuJU6RJFNci-Mbuho&callback=initMap&libraries=places"
     async defer>
   </script>
   <script type="text/javascript" src="js/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
